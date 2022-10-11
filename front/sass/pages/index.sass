@@ -5,8 +5,8 @@ $grey: #EDEDED
 $green: #05C489
 $green-hover: #05b37c
 
-$font-suisseintl-med: SuisseIntl-Medium, sans-serif //500
-$font-suisseintl-semb: SuisseIntl-SemiBold, sans-serif //600
+$font-suisse-bold: SuisseIntl-Bold, sans-serif //700
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600
 $font-wulkan: WulkanDisplay, sans-serif
 
 
@@ -21,107 +21,74 @@ body
   height: 100%
   display: flex
 .banner
-  width: 100%
+  width: 50%
   height: 100vh
   height: calc(var(--vh, 1vh) * 100)
   background: $blue
   position: relative
   overflow: hidden
   cursor: default
-  background: $blue url("../img/back.jpg") no-repeat 0 50%/cover
-  &__pyramid
-    position: absolute
-    width: 100%
-    bottom: 94px
-    left: 0
-    z-index: 1
-  &__pers
-    position: absolute
-    bottom: -10px
-    left: -159px
-    height: 71vh
-    width: 52vh
-    z-index: 5
-  &__info
-    padding: 100px 100px 0 0
-    display: flex
-    flex-direction: column
-    align-items: flex-end
-    position: relative
-    z-index: 10
+  background: $blue url("../img/bg.jpg") no-repeat 50% 0/cover
+  padding: 345px 0 0 0
+  display: flex
+  flex-direction: column
+  align-items: center
   &__title
-    font-family: $font-suisseintl-semb
-    font-size: 97px
-    line-height: 126px
-    letter-spacing: 0.03em
+    font-family: $font-suisse-bold
+    font-size: 146px
+    line-height: 134px
+    text-align: center
+    letter-spacing: 0.04em
     text-transform: uppercase
-    font-feature-settings: 'pnum' on, 'lnum' on
-    text-align: right
-    color: #FFFFFF
-    margin: 0 0 30px 0
-  &__code
-    display: flex
-    flex-direction: column
-    align-items: flex-end
-    &-copy
+    color: $grey
+    margin: 0 0 115px 0
+    span
       font-family: $font-wulkan
-      font-size: 66px
-      line-height: 91px
-      padding: 15px 30px 13px
-      color: $magenta
-      letter-spacing: 0.02em
-      text-transform: uppercase
-      border: 2px dashed $magenta
-    &-text
-      font-family: $font-suisseintl-semb
-      font-size: 21px
-      line-height: 27px
-      color: $blue
-      background: $magenta
-      padding: 6px 8px 4px
-      margin-top: -2px
-      border-radius: 0px 0px 8px 8px
-      text-transform: uppercase
-      span
-        color: #FFFFFF
-  &__footer
-    position: absolute
-    width: 100%
-    bottom: 0
-    left: 0
-    z-index: 15
-    background: $blue
-    padding: 34px 10px 32px
-    &-list
-      display: flex
-      align-items: center
-      justify-content: center
+  &__info
+    &-top
+      margin: 0 0 60px 0
     &-item
       display: flex
-      align-items: center
-      margin: 0 75px 0 0
-      &:last-child
-        margin: 0
-      .percent
-        font-family: $font-suisseintl-med
-        font-size: 66px
-        line-height: 36px
-        letter-spacing: 0.04em
-        margin: 0 15px 0 0
-        color: #FFFFFF
-        span
-          display: inline-block
-          font-size: 32px
-          margin: 0 0 0 -15px
-      .info
-        font-family: $font-suisseintl-med
-        font-size: 22px
-        line-height: 26px
-        letter-spacing: 0.02em
-        color: $magenta
+      .in
+        white-space: nowrap
+        font-family: $font-suisse-semb
+        font-size: 79px
+        line-height: 102px
+        text-align: center
+        letter-spacing: 0.01em
         text-transform: uppercase
+        opacity: 0.35
+        -webkit-text-stroke-width: 3.2px
+        -webkit-text-stroke-color: $grey
+        color: transparent
+        margin: 0 22px 0 0
+      .bonus
+        margin: 0 22px 0 0
+        &__top
+          white-space: nowrap
+          font-family: $font-suisse-semb
+          font-size: 79px
+          line-height: 102px
+          text-align: center
+          letter-spacing: 0.01em
+          text-transform: uppercase
+          color: $grey
+        &__bottom
+          white-space: nowrap
+          font-family: $font-suisse-semb
+          font-size: 49px
+          line-height: 64px
+          text-align: center
+          letter-spacing: 0.01em
+          text-transform: uppercase
+          color: $grey
+          margin-top: -8px
 
 
 
 
-
+@media screen and (max-width: 1023px)
+  .wrapper
+    display: none
+  .Layout_column__3MM83
+    width: 100%
